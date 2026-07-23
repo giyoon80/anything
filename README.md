@@ -17,6 +17,11 @@ Git 저장소를 연결하면 `main` 브랜치의 변경 사항이 자동으로 
 
 응답 헤더는 Cloudflare Pages가 배포 시 읽는 [`_headers`](./_headers)에서 관리합니다.
 
+검색 엔진 중복 URL을 줄이려면 Cloudflare dashboard의 **Bulk Redirects**에서
+`https://www.graphplot.shop/*`를 `https://graphplot.shop/*`로 301 리다이렉트하도록
+설정합니다. Cloudflare Pages의 `_redirects` 파일은 도메인 단위 리다이렉트를 지원하지
+않으므로 `www` 정규화는 dashboard 규칙으로 관리해야 합니다.
+
 ## 코드 구조
 
 - `index.html`: 메인 도구의 문서 구조와 외부 서비스 로더
